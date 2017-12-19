@@ -1,0 +1,27 @@
+<h3>CRUD Items</h3>
+<h4>Create</h4>
+<form>
+    <input type="string" name="name" [(ngModel)]="creationItem.name" placeholder="Name">
+    <input type="string" name="description" [(ngModel)]="creationItem.description" placeholder="Description">
+    <button type="submit" (click)="create()" [disabled]="creationItem.name === ''">Create</button>
+</form>
+<div [style.display]="updateCheked?'block':'none'">
+    <h4>Update</h4>
+    <form>
+        <input readonly type="number" name="id" [(ngModel)]="updateItem.id" placeholder="Id">
+        <input type="string" name="name" [(ngModel)]="updateItem.name" placeholder="Name">
+        <input type="string" name="description" [(ngModel)]="updateItem.description" placeholder="Description">
+        <button type="submit" (click)="save()">Save</button>
+        <button type="submit" (click)="cancel()">Cancel</button>
+    </form>
+</div>
+<h4 *ngIf="items != undefined && items.length == 0"> Lista vacía!!!</h4>
+<ul *ngFor="let item of items">
+    <li>
+        <input readonly type="number" name="id" [(ngModel)]="item.id">
+        <input readonly type="string" name="name" [(ngModel)]="item.name">
+        <button (click)="read(item.id)">Read</button>
+        <button (click)="delete(item.id)">Delete</button>
+        <button (click)="prepareUpdate(item.id)">Update</button>
+    </li>
+</ul>

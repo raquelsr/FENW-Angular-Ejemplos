@@ -1,0 +1,20 @@
+<h3>Union de propiedades</h3>
+<p [title]="title">{{title}} --- {{getValue()}}</p>
+<h3>Union de eventos</h3>
+<button (click)="event('Botón Pulsado')">
+  Event1
+</button>
+<button (mouseover)="event2($event)">
+  Event2
+</button>
+
+<p><input type="text" [(ngModel)]="prueba" placeholder="escribe"></p>
+<button (click)="event3()">
+  Event3
+</button>
+<h3>Union de propiedades & eventos</h3>
+<p><input type="text" [(ngModel)]="title"></p>
+<p>{{prueba2}}</p>
+<p><input type="text" [(ngModel)]="prueba2"></p>
+
+

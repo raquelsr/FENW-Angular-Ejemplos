@@ -1,0 +1,8 @@
+<h3>Number</h3>
+<div class="number-width">
+    <input class="number-full" type="number" name="number" [(ngModel)]="value" 
+        placeholder="Number" (blur)="onBlur()">
+    <p class="red" *ngIf="error">
+        Por favor, de {{min}} a {{max}}
+    </p>
+</div>

@@ -1,0 +1,22 @@
+<h3>Read & Delete</h3>
+<ul *ngFor="let item of items">
+  <li>
+    <input readonly type="number" name="id" [(ngModel)]="item.id" >
+    <input readonly type="string"  name="name" [(ngModel)]="item.name">
+    <button (click)="removeItem(item)">Delete</button>
+    <button (click)="editItem(item)">Edit</button>
+  </li>
+</ul>
+<h3>Update</h3>
+<form>
+  <input  type="number" name="id" [(ngModel)]="itemUpdate.id" placeholder="Id">
+  <input  type="string"  name="name" [(ngModel)]="itemUpdate.name" placeholder="Name">
+  <button type="submit" (click)="updateItem()"  [disabled]="itemUpdate.id === undefined">Update</button>
+</form>
+<h3>Create</h3>
+<form>
+  <input  type="number" name="id" [(ngModel)]="itemCreate.id" placeholder="Id">
+  <input  type="string"  name="name" [(ngModel)]="itemCreate.name" placeholder="Name">
+  <button type="submit" (click)="addItem()"
+    [disabled]="itemCreate.id === undefined || itemCreate.name === undefined">Create</button>
+</form>

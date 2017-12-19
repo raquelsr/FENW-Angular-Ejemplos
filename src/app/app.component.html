@@ -1,0 +1,84 @@
+<h1>Angular</h1>
+
+<hr>
+
+<h2>Typescript</h2>
+<h4>Esta realizado en un subcomponent, se resuelve y se incrusta</h4>
+<app-typescript></app-typescript>
+
+<hr>
+
+<h2>Union de propiedades y eventos</h2>
+<app-binding></app-binding>
+
+<hr>
+
+<h2>Sub-components</h2>
+<app-sub-comp [subComponentProperty]="title" (subComponentEvent)="processEvent($event)"></app-sub-comp>
+
+<h2>Sub-components-Prueba</h2>
+<app-sub-comp-prueba [subComponentPropertyPrueba]="title" (subComponentEvent)="processEvent('hola')"></app-sub-comp-prueba>
+
+<number [min]="0" [max]="100" [value]="6" (valueOut)="value=$event"></number>
+<p>Valor del subcomponente Number (solo si es válido):{{value}}</p>
+
+<hr>
+
+<h2>Directivas ng*</h2>
+<app-directive-ng></app-directive-ng>
+
+<hr>
+
+<h2>Ejercicio CRUD</h2>
+<app-crud></app-crud>
+
+<hr>
+
+<h2>Zona cambiable por rutas de componentes</h2>
+<router-outlet></router-outlet>
+
+<hr>
+
+<h2>Pipe: filtros</h2>
+<app-pipe></app-pipe>
+
+<hr>
+
+<h2>Observer</h2>
+<app-observer></app-observer>
+
+<hr>
+
+<<<<<<< HEAD
+<h2>Observable Ejercicio</h2>
+<app-observer-prueba></app-observer-prueba>
+
+<h2>Observador Ejercicio</h2>
+<app-observer-prueba-2></app-observer-prueba-2>
+=======
+<h2>Observer: counter</h2>
+<app-counter-observable></app-counter-observable>
+>>>>>>> 3fdeea6cb8948ce0d085d40b2860a9d0d2019807
+
+<hr>
+
+<h2>API response</h2>
+<app-api-response></app-api-response>
+
+<hr>
+
+<h2>API github</h2>
+<app-api-github></app-api-github>
+
+<hr>
+
+<h2>API Items</h2>
+<app-api-items></app-api-items>
+
+<hr>
+
+<h2>Directivas propias</h2>
+<app-directive-miw></app-directive-miw>
+
+<hr>
+

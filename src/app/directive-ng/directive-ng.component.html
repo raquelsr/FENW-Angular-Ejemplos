@@ -1,0 +1,11 @@
+<div *ngFor="let employee of employees">
+    <p *ngIf="isProfessor(employee)"> El profe!!!</p>
+    <input type="checkbox" [(ngModel)]="employee.checked">
+    <span [style.textDecoration]="employee.checked?'line-through':'none'">
+        {{employee.name}}
+    </span>
+    <button (click)="removeEmployee(employee)">Delete</button>
+</div>
+<!-- con # definimos variables en la plantilla (template) -->
+<input #employeeName>
+<button (click)="addEmployee(employeeName.value); employeeName.value=''">Add</button>

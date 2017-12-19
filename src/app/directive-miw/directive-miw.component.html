@@ -1,0 +1,29 @@
+<h3>Attribute Directives</h3>
+
+<h4>hidden</h4>
+<p [mwHidden]="value1">Valor oculto</p>
+<p [mwHidden]="value2">Hidden es false y se muestra</p>
+
+<h4>underline</h4>
+<p> <span mwUnderline>Hover to underline</span> </p>
+
+<h3>Structural Directives</h3>
+<div *mwIf="true">
+  Inside if
+</div>
+<ul>
+  <li *mwLoop="3">
+    Namaste
+  </li>
+</ul>
+<div *mwDelay="10000">
+  <b> Bye in 10 seg.! </b>
+</div>
+<h4>mwMessages</h4>
+<ul>
+  <li *mwMessages="let message">{{message}}</li>
+</ul>
+<h4>mwFor</h4>
+<ul>
+  <li *mwFor="let value of list">{{value}}</li>
+</ul>
